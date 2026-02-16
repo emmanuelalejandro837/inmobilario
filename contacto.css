@@ -1,0 +1,287 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --color-primario: #000000;
+    --color-secundario: #4CAF50;
+    --color-fondo: #f5f5f5;
+    --color-blanco: #ffffff;
+    --sombra: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-fondo);
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    background-color: var(--color-primario);
+    padding: 15px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--sombra);
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: var(--color-blanco);
+    font-size: 24px;
+    letter-spacing: 1px;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s;
+}
+
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-secundario);
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+nav ul li a:hover {
+    color: var(--color-secundario);
+}
+
+
+section {
+    padding: 90px 40px;
+    background-color: var(--color-blanco);
+    margin: 30px auto;
+    max-width: 1200px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--color-primario);
+    font-size: 32px;
+}
+
+
+#inicio {
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+                url("../img/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    color: var(--color-blanco);
+    text-align: center;
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#inicio h1 {
+    font-size: 52px;
+    margin-bottom: 20px;
+    animation: aparecer 1s ease;
+}
+
+#inicio p {
+    max-width: 650px;
+    margin-bottom: 35px;
+    font-size: 18px;
+    animation: aparecer 1.3s ease;
+}
+
+#inicio a {
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: var(--color-blanco);
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#inicio a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+
+#empresa p {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    font-size: 17px;
+}
+
+
+section ul {
+    max-width: 800px;
+    margin: auto;
+}
+
+section ul li {
+    margin: 12px 0;
+    padding-left: 10px;
+}
+
+
+#proyectos {
+    background-color: #f9f9f9;
+}
+
+#proyectos h3 {
+    color: var(--color-primario);
+    margin-top: 25px;
+}
+
+
+#servicios ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    text-align: center;
+}
+
+#servicios li {
+    background-color: var(--color-blanco);
+    padding: 30px 20px;
+    border-radius: 15px;
+    font-weight: bold;
+    box-shadow: var(--sombra);
+    transition: transform 0.3s, background 0.3s;
+}
+
+#servicios li:hover {
+    transform: translateY(-8px);
+    background-color: var(--color-secundario);
+    color: var(--color-blanco);
+}
+
+
+form {
+    max-width: 520px;
+    margin: auto;
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+form label {
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+form button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #000000, #ffffff);
+    color: var(--color-primario);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+form button:hover {
+    transform: scale(1.05);
+}
+
+
+#contacto p {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+footer {
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #inicio h1 {
+        font-size: 38px;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+}
