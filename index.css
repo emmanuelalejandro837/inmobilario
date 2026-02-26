@@ -22,7 +22,7 @@ html {
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--color-fondo);
-    color: #333;
+    color: rgb(87, 87, 87);
     line-height: 1.6;
 }
 
@@ -289,4 +289,5 @@ footer {
 .logo-titulo {
     height: 25%;
     width: 50rem;
+
 }
