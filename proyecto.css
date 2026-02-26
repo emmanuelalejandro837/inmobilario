@@ -22,7 +22,7 @@ html {
 body {
     font-family: 'Arial', sans-serif;
     background-color: var(--color-fondo);
-    color: #333;
+    color: rgb(87, 87, 87);
     line-height: 1.6;
 }
 
@@ -305,3 +305,4 @@ footer {
     border-radius: 10px;
     transition: 0.3s ease;
 }
+
